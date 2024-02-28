@@ -3,15 +3,19 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(15);
+  let [counter, setCounter] = useState(0);
   
 
   const addValue =() =>{
+    if(counter >= 0 && counter < 25)
     counter = counter + 1;
     setCounter(counter)
+    
   }
   const removeValue = ()=>{
-    setCounter(counter -1)
+    if(counter > 0 && counter <= 25)
+    setCounter(counter - 1)
+    
   }
 
   return (
