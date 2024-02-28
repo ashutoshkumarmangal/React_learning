@@ -6,18 +6,29 @@ function App() {
   let [counter, setCounter] = useState(0);
   
 
-  const addValue =() =>{
-    if(counter >= 0 && counter < 25)
-    counter = counter + 1;
-    setCounter(counter)
+  // //this is if we want to set limit
+  // const addValue =() =>{
+  //   if(counter >= 0 && counter < 25)
+  //   counter = counter + 1;
+  //   setCounter(counter)
     
-  }
+  // }
   const removeValue = ()=>{
     if(counter > 0 && counter <= 25)
     setCounter(counter - 1)
     
   }
 
+  const addValue = () =>{
+
+    // //if we do same operation than this is put into batch operation and same work is done once 
+    // counter = counter + 1
+    // counter = counter + 1
+
+    //to increment value we can do this
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+  }
   return (
     <>
       <h1>Chai aur react</h1>
